@@ -1,0 +1,28 @@
+.num {
+  margin-top: 12px;
+}
+.type {
+  padding-bottom: 12px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: auto;
+  height: auto;
+  text-align: left;
+  padding-left: 50px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  box-shadow: 180px 180px 160px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.answers{
+    float: inline-end;
+    padding: 12px;
+    background-color: rgb(100, 105, 105);
+}
