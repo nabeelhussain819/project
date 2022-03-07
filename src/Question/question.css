@@ -12,6 +12,7 @@
   text-align: left;
   padding-left: 50px;
   margin-bottom: 10px;
+  margin-top: 21px;
 }
 
 .card:hover {
@@ -21,8 +22,35 @@
 .container {
   padding: 2px 16px;
 }
-.answers{
-    float: inline-end;
-    padding: 12px;
-    background-color: rgb(100, 105, 105);
+.answers {
+  float: inline-end;
+  padding: 12px;
+  background-color: rgb(63, 153, 73);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+  background-color: #2196f3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+#progressbar {
+  background-color: black;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+}
+
+#progressbar > div {
+  background-color: orange;
+  width: 40%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
 }
