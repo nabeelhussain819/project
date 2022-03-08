@@ -2,39 +2,57 @@ import React from "react";
 import myData from "./question.json";
 
 export default function Result(props) {
-  console.log(props.data);
   const data = myData.length - 1;
   const per = Math.round((props.data / data) * 100);
-  console.log(per)
+  const per2 = Math.round((props.change / data) * 100);
+
   const Parentdiv = {
-    height: "12px",
+    height: "50px",
     width: "98%",
-    backgroundColor: "gray",
-    borderRadius: 40,
+    backgroundColor: "transparent",
+
     margin: 10,
+    border: "2px solid black",
   };
 
   const Childdiv = {
     height: "100%",
     width: `${per}%`,
-    backgroundColor: "green",
-    borderRadius: 40,
+    backgroundColor: "black",
+
+    textAlign: "left",
+  };
+  const SuperChild = {
+    height: "100%",
+    width: `${per2}%`,
+    backgroundColor: "gray",
+
     textAlign: "right",
+
+    position: "relative",
   };
 
   const progresstext = {
     padding: 10,
     color: "black",
     fontWeight: 900,
-  };
 
+    float: "Left",
+  };
+  const progresstext1 = {
+    padding: 10,
+    color: "black",
+    fontWeight: 900,
+
+    float: "Right",
+  };
   return (
     <div>
-      your total result is {props.data} out of {data}
+      <span style={progresstext}> SCORE: {per}%</span>
+      <span style={progresstext1}>MAX SCORE: {per2}%</span>
+      <br /> 
       <div style={Parentdiv}>
-        <div style={Childdiv}>
-          <span style={progresstext}>{(per)}%</span>
-        </div>
+        <div style={SuperChild}><div style={Childdiv}></div></div>
       </div>
     </div>
   );
